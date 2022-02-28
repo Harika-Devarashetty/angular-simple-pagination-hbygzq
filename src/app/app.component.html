@@ -12,24 +12,29 @@
 <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls> -->
 
 <hello name="{{ name }}"></hello>
-<p>
-	Start editing to see some magic happen :)
-</p>
+<p>Start editing to see some magic happen :)</p>
 
 <p>Http Request</p>
 
-<table width="100%">
-	<tr>
-		<th>Id</th>
-		<th>Name</th>
-		<th>User Id</th>
-		<th>Status</th>
-	</tr>
-	<tr *ngFor="let datas of httpData | paginate: { itemsPerPage: 10, currentPage: p }">
-		<td>{{datas.id}}</td>
-		<td>{{datas.title}}</td>
-		<td>{{datas.userId}}</td>
-		<td>{{datas.completed}}</td>
-	</tr>
+<table width="100%" class="table table-bordered table-striped">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>User Id</th>
+    <th>Status</th>
+  </tr>
+  <tr
+    *ngFor="
+      let datas of httpData | paginate: { itemsPerPage: 10, currentPage: p }
+    "
+  >
+    <td>{{ datas.id }}</td>
+    <td>{{ datas.title }}</td>
+    <td>{{ datas.userId }}</td>
+    <td>{{ datas.completed }}</td>
+  </tr>
 </table>
-<pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+<pagination-controls
+  (pageChange)="p = $event"
+  class="float-right"
+></pagination-controls>
