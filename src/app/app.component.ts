@@ -16,7 +16,7 @@ interface Kafein {
 export class AppComponent  {
   
 
-  name = "Angular " + VERSION.full;
+  // name = "Angular " + VERSION.full;
   url = "https://jsonplaceholder.typicode.com/todos";
   httpData: any;
 
